@@ -19,17 +19,17 @@ export default function TimetablePage() {
     try {
       const response = await axios.get(`${baseURL}/timetable`);
       const timetableData = response.data.timetable;
-      console.log('Fetched Timetable:', timetableData);
+      // console.log('Fetched Timetable:', timetableData);
       setTimetable(timetableData);
       setGrades(Object.keys(timetableData));
       setDays(Object.keys(timetableData[selectedGrade])); // Set days based on the default selected grade
     } catch (error) {
-      console.error('Error fetching timetable:', error);
+      // console.error('Error fetching timetable:', error);
     }
   };
 
   const handleGradeSelect = (grade) => {
-    console.log('Selected Grade:', grade);
+    // console.log('Selected Grade:', grade);
     setSelectedGrade(grade);
     setDays(Object.keys(timetable[grade]));
   };

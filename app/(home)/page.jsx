@@ -24,7 +24,7 @@ const ReviewCarousel = dynamic(() => import('../../Components/ReviewCarousel'), 
 export default function Home() {
   const [SlideData, SetSlideData] = useState('')
   const [NewsData, SetNewsData] = useState('')
-  console.log(NewsData, "Data")
+  // console.log(NewsData, "Data")
   let getData = () => {
     axios
       .get(`${baseURL}/slides`)

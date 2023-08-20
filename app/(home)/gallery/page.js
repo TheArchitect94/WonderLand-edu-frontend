@@ -12,7 +12,7 @@ const ReviewCarousel = dynamic(
 
 export default function Page() {
   const [ImageData, SetImageData] = useState('')
-  console.log(ImageData, "Data")
+  // console.log(ImageData, "Data")
 
   let getData = () => {
     axios

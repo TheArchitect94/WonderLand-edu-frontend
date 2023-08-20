@@ -34,7 +34,7 @@ const Footer = () => {
     { icon: EmailIcon, info: "info@wonderland.com.pk" },
   ];
   const [NewsData, SetNewsData] = useState([])
-  console.log(NewsData, "Data")
+  // console.log(NewsData, "Data")
   let getData = () => {
     axios.get(`${baseURL}/news`)
       .then((response) => {

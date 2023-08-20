@@ -60,7 +60,7 @@ export default function page() {
     axios
       .get(`${baseURL}/admissionform`)
       .then((response) => {
-        console.log(response)
+        // console.log(response)
         setTableRows(response.data.admission_forms);
       })
       .catch((err) => {});
@@ -69,7 +69,7 @@ export default function page() {
   // Function to handle the delete button click
   const handleDelete = (id) => {
     axios.delete(`${baseURL}/admissionform/${id}`).then((response) => {
-      console.log(response);
+      // console.log(response);
       if (response.data.status) {
         Setrefresh(!refresh);
       } else {
@@ -85,7 +85,7 @@ export default function page() {
       router.replace("/admin");
     }
         getData();
-        console.log(authData,"State Auth Data in use Effect")
+        // console.log(authData,"State Auth Data in use Effect")
   }, [refresh,token, user, router]);
 
   return (

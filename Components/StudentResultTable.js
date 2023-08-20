@@ -24,7 +24,7 @@ const StudentResultTable = ({
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
-  console.log("Data in StudentResultTable:", columns, rows);
+  // console.log("Data in StudentResultTable:", columns, rows);
   return (
     <div style={{ padding: "0 16px" }}> {/* Add spacing on the left and right */}
       <TableContainer component={Paper}>

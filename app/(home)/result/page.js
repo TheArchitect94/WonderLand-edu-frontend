@@ -47,15 +47,15 @@ export default function page() {
         setTableRows(transformedTableRows);
         setGrades(Object.keys(responseData.student_results));
       } else {
-        console.error("No student_results found in the response.");
+        // console.error("No student_results found in the response.");
       }
     } catch (err) {
-      console.error("API Request Error:", err);
+      // console.error("API Request Error:", err);
     }
   };
 
   const handleGradeSelect = (grade) => {
-    console.log('Selected Grade:', grade);
+    // console.log('Selected Grade:', grade);
     setSelectedGrade(grade);
   };
 

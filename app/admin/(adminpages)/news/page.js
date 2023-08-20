@@ -31,7 +31,7 @@ export default function page() {
     { id: "description", label: "Description" },
   ];
   const SendData = () => {
-    console.log("Model data:", model);
+    // console.log("Model data:", model);
     const formData = new FormData();
     formData.append("title", model.title);
     formData.append("description", model.description);
@@ -39,7 +39,7 @@ export default function page() {
     axios
       .post(`${baseURL}/news`, formData)
       .then((response) => {
-        console.log(response, "response");
+        // console.log(response, "response");
         if (response.status === 201) {
           setAlertContent(response.data.message);
           setSeverity("success");
@@ -51,7 +51,7 @@ export default function page() {
         }
       })
       .catch((error) => {
-        console.log(error, "Error");
+        // console.log(error, "Error");
         setAlertContent(error.response?.data?.message || "An error occurred");
         setSeverity("error");
         setAlertOpen(true);
@@ -79,7 +79,7 @@ export default function page() {
   // Function to handle the delete button click
   const handleDelete = (id) => {
     axios.delete(`${baseURL}/news/${id}`).then((response) => {
-      console.log(response);
+      // console.log(response);
       if (response.data.status) {
         Setrefresh(!refresh);
       } else {
@@ -96,7 +96,7 @@ export default function page() {
       router.replace("/admin");
     }
         getData();
-        console.log(authData,"State Auth Data in use Effect")
+        // console.log(authData,"State Auth Data in use Effect")
   }, [refresh,token, user, router]);
 
 

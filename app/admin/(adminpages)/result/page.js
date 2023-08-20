@@ -45,9 +45,9 @@ export default function page() {
     { id: "subjects", label: "Subjects" },
   ];
 
-  console.log(tableRows, "Table Rows");
+  // console.log(tableRows, "Table Rows");
 
-  console.log(subjectArray, "Subject Array");
+  // console.log(subjectArray, "Subject Array");
   const handleSubjectChange = (index, field, value) => {
     const updatedSubjects = [...subjectArray];
     updatedSubjects[index][field] = value;
@@ -83,7 +83,7 @@ export default function page() {
         },
       })
       .then((response) => {
-        console.log(response, "response"); // Log the entire response for debugging
+        // console.log(response, "response"); // Log the entire response for debugging
         if (response.status === 201) {
           setAlertContent(response.data.message);
           setSeverity("success");
@@ -96,7 +96,7 @@ export default function page() {
         }
       })
       .catch((error) => {
-        console.log(error, "Error"); // Log the entire error object for debugging
+        // console.log(error, "Error"); // Log the entire error object for debugging
         setAlertContent(
           error.response?.data?.message ||
             "An error occurred while processing the request."
@@ -140,11 +140,11 @@ export default function page() {
           }
           setTableRows(transformedTableRows);
         } else {
-          console.error("No student_results found in the response.");
+          // console.error("No student_results found in the response.");
         }
       })
       .catch((err) => {
-        console.error("API Request Error:", err);
+        // console.error("API Request Error:", err);
       });
   };
 
@@ -152,7 +152,7 @@ export default function page() {
     axios
       .delete(`${baseURL}/studentresult/${id}`)
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         if (response.status === 200) {
           Setrefresh(!refresh);
           setAlertContent("Student deleted successfully.");
@@ -165,7 +165,7 @@ export default function page() {
       })
       .catch((error) => {
         // Handle error
-        console.error(error);
+        // console.error(error);
         setAlertContent("Failed to delete student.");
         setSeverity("error");
         setAlertOpen(true);
@@ -179,7 +179,7 @@ export default function page() {
       router.replace("/admin");
     }
     getData();
-    console.log(authData, "State Auth Data in use Effect");
+    // console.log(authData, "State Auth Data in use Effect");
   }, [refresh, token, user, router]);
 
   return (

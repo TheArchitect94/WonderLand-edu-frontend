@@ -441,11 +441,11 @@ const Page = () => {
     return steps.length;
   };
   const SendData = () => {
-    console.log("Model data:", model);
+    // console.log("Model data:", model);
     axios
       .post(`${baseURL}/admissionform`, model)
       .then((response) => {
-        console.log(response, "response");
+        // console.log(response, "response");
         if (response.status === 201) {
           setAlertContent(response.data.message);
           setSeverity("success");
@@ -461,7 +461,7 @@ const Page = () => {
         }
       })
       .catch((error) => {
-        console.log(error, "Error");
+        // console.log(error, "Error");
         setAlertContent(error.response?.data?.message || "An error occurred");
         setSeverity("error");
         setAlertOpen(true);

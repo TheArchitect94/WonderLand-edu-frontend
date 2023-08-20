@@ -12,7 +12,7 @@ const ReviewCarousel = dynamic(
     );
 export default function page() {
   const [JobsData, SetJobsData] = useState('')
-  console.log(JobsData)
+  // console.log(JobsData)
   let getData = () => {
     axios.get(`${baseURL}/jobs`)
       .then((response) => {

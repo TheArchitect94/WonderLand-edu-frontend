@@ -27,11 +27,11 @@ export default function page() {
     try {
       const response = await axios.get(`${baseURL}/booklist`);
       const grades = response.data.map((classData) => classData.classname);
-      console.log("Fetched Grades:", grades);
+      // console.log("Fetched Grades:", grades);
       setGrades(grades);
       setSelectedGrade(grades[0]);
     } catch (error) {
-      console.error("Error fetching grades:", error);
+      // console.error("Error fetching grades:", error);
     }
   };
 
@@ -41,14 +41,14 @@ export default function page() {
       const booksData = response.data.find(
         (classData) => classData.classname === grade
       );
-      console.log("Books Data:", booksData);
+      // console.log("Books Data:", booksData);
       if (booksData) {
         setBooksByGrade(booksData.books);
       } else {
         setBooksByGrade([]);
       }
     } catch (error) {
-      console.error("Error fetching books by grade:", error);
+      // console.error("Error fetching books by grade:", error);
     }
   };
 
@@ -64,7 +64,7 @@ export default function page() {
   }, [selectedGrade, refresh]);
 
   const handleGradeSelect = (grade) => {
-    console.log("Selected Grade:", grade);
+    // console.log("Selected Grade:", grade);
     setSelectedGrade(grade);
   };
 

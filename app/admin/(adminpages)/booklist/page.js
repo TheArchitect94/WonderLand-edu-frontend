@@ -37,7 +37,7 @@ export default function page() {
     { id: "book_price", label: "Price" },
   ];
   const SendData = () => {
-    console.log("Model data:", model);
+    // console.log("Model data:", model);
     
     const formData = new FormData();
   formData.append("class_name", model.class_name);
@@ -57,7 +57,7 @@ export default function page() {
     axios
       .post(`${baseURL}/booklist`, formData, config)
       .then((response) => {
-        console.log(response, "response");
+        // console.log(response, "response");
         if (response.status === 201) {
           setAlertContent(response.data.message);
           setSeverity("success");
@@ -69,7 +69,7 @@ export default function page() {
         }
       })
       .catch((error) => {
-        console.log(error, "Error");
+        // console.log(error, "Error");
         setAlertContent(error.response?.data?.message || "An error occurred");
         setSeverity("error");
         setAlertOpen(true);
@@ -89,7 +89,7 @@ export default function page() {
     axios
       .get(`${baseURL}/booklist`)
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         const booksData = response.data.map((classData) => classData.books);
         const allBooks = booksData.flat();
         setTableRows(allBooks);
@@ -99,7 +99,7 @@ export default function page() {
 
   const handleDelete = (id) => {
     axios.delete(`${baseURL}/booklist/${id}`).then((response) => {
-      console.log(response);
+      // console.log(response);
       if (response.data.status) {
         Setrefresh(!refresh);
       } else {
@@ -117,7 +117,7 @@ export default function page() {
       router.replace("/admin");
     }
         getData();
-        console.log(authData,"State Auth Data in use Effect")
+        // console.log(authData,"State Auth Data in use Effect")
   }, [refresh,token, user, router]);
 
   return ( 
@@ -138,7 +138,7 @@ export default function page() {
                         accept: ".jpg,.png,.pdf", 
                       }}
                       onChange={(e) =>{
-                        console.log("Image File Selected:", e.target.files[0]);
+                        // console.log("Image File Selected:", e.target.files[0]);
                           setModel({ ...model, image_url: e.target.files[0] })
                       }
                         

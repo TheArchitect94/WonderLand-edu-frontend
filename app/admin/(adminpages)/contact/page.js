@@ -45,7 +45,7 @@ export default function page() {
 
   const handleDelete = (id) => {
     axios.delete(`${baseURL}/contact/${id}`).then((response) => {
-      console.log(response);
+      // console.log(response);
       if (response.data.status) {
         Setrefresh(!refresh);
       } else {
@@ -61,7 +61,7 @@ export default function page() {
       router.replace("/admin");
     }
     getData();
-    console.log(authData, "State Auth Data in use Effect");
+    // console.log(authData, "State Auth Data in use Effect");
   }, [refresh, token, user, router]);
 
   return (

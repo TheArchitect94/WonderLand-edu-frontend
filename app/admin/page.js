@@ -20,13 +20,13 @@ export default function page() {
   const selectAuthData = (state) => state.auth;
   const authData = useSelector(selectAuthData);
   const { token, user } = authData;  
-  console.log(authData,"AuthData")
+  // console.log(authData,"AuthData")
   const loginUser = () => {
-    console.log("Model data:", model);
+    // console.log("Model data:", model);
     axios
       .post(`${baseURL}/login`, model)
       .then((response) => {
-        console.log(response, "response");
+        // console.log(response, "response");
         if (response.status === 200) {
           setAlertContent(response.data.message);
           setAlert(true);
@@ -43,7 +43,7 @@ export default function page() {
         }
       })
       .catch((error) => {
-        console.log(error, "Error");
+        // console.log(error, "Error");
         // setAlertContent(error.data.message);
         setAlert(true);
         setSeverity("error");
