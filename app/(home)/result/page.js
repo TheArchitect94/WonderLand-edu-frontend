@@ -11,7 +11,7 @@ const ReviewCarousel = dynamic(
   { ssr: false }
 );
 
-export default function page() {
+export default function Page() {
   const [tableRows, setTableRows] = useState([]);
   const [tableColumns, setTableColumns] = useState([
     { id: "classname", label: "Classname" },

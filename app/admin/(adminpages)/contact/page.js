@@ -17,7 +17,7 @@ import baseURL from "@Config/baseURL";
 import { useRouter } from "next/navigation";
 import { useSelector } from "react-redux";
 
-export default function page() {
+export default function Page() {
   const [model, setModel] = useState({});
   const [alert, setAlert] = useState(false);
   const [alertContent, setAlertContent] = useState("");

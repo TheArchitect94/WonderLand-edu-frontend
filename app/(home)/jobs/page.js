@@ -10,7 +10,7 @@ const ReviewCarousel = dynamic(
     () => import("../../../Components/ReviewCarousel"),
     { ssr: false }
     );
-export default function page() {
+export default function Page() {
   const [JobsData, SetJobsData] = useState('')
   // console.log(JobsData)
   let getData = () => {

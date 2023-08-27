@@ -37,7 +37,7 @@ const CustomCard = ({ Data ,href}) => {
                       alignItems: "center",
                     }}
                   >
-                    <Image src={item.image_url} />
+                    <Image src={item.image_url} alt="image" />
                   </Box>
                   <Typography
                     variant="h2"

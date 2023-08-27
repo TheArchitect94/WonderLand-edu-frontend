@@ -10,7 +10,7 @@ const ReviewCarousel = dynamic(
     () => import("../../../Components/ReviewCarousel"),
     { ssr: false }
     );
-export default function page() {
+export default function Page() {
   const [NewsData, SetNewsData] = useState('')
   let getData = () => {
     axios.get(`${baseURL}/news`)

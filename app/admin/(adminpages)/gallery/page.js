@@ -17,7 +17,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useSelector } from "react-redux";
 import SendIcon from '@mui/icons-material/Send';
-export default function page() {
+export default function Page() {
   const [model, setModel] = useState({});
   const [alert, setAlert] = useState(false);
   const [alertContent, setAlertContent] = useState("");

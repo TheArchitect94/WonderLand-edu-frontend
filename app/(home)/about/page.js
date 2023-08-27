@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 const ReviewCarousel = dynamic(() => import('../../../Components/ReviewCarousel'), { ssr: false });
 
 
-export default function page() {
+export default function Page() {
   return (
     <div style={{ padding: 0, margin: 0 }}>
       <Box sx={{ p: 2, pt: 8 }}>

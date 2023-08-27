@@ -10,7 +10,7 @@ const ReviewCarousel = dynamic(
   () => import("../../../Components/ReviewCarousel"),
   { ssr: false }
 );
-export default function page() {
+export default function Page() {
   const [model, setModel] = useState({});
   const [alert, setAlert] = useState(false);
   const [alertContent, setAlertContent] = useState("");

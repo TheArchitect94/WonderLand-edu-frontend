@@ -82,7 +82,7 @@ export default function Home() {
             </Typography>
           </Grid>
           <Grid item md={6}>
-            <img style={{ borderRadius: 25 }} width={'100%'} height={'90%'} src="https://wonderland.edu.pk/school-children-dressed-uniform-have-fun-play-schoolyard.27388edbf5b6c225.jpg" alt="Students" />
+            <img style={{ borderRadius: 25 }} width={'100%'} height={'90%'}  src="https://wonderland.edu.pk/school-children-dressed-uniform-have-fun-play-schoolyard.27388edbf5b6c225.jpg" alt="logo" />
           </Grid>
         </Grid>
       </Box>

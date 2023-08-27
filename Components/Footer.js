@@ -63,6 +63,7 @@ const Footer = () => {
                 src="https://wonderland.edu.pk/assets/wgs-logo.png"
                 width={"55%"}
                 height={"55%"}
+                alt="img"
               />
               <Box sx={{ display: "flex", pt: 3, pl: 2 }}>
                 {Icons.map((icon, index) => (
@@ -98,6 +99,7 @@ const Footer = () => {
                 width={"40px"}
                 height={"40px"}
                 style={{ borderRadius: "10px" }}
+                alt="newsimg"
               />
             </Box>
             <Box sx={{ ml: 2 }}>

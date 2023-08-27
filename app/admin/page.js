@@ -9,7 +9,7 @@ import CSTextField from "@Components/CSTextField";
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout } from "@Store/authSlice";
 import SendIcon from '@mui/icons-material/Send';
-export default function page() {
+export default function Page() {
   const [model, setModel] = useState({});
   const [alert, setAlert] = useState(false);
   const [alertContent, setAlertContent] = useState("");

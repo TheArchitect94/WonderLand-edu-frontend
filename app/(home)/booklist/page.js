@@ -11,7 +11,7 @@ const ReviewCarousel = dynamic(
   { ssr: false }
 );
 
-export default function page() {
+export default function Page() {
   const tableColumns = [
     { id: "image_url", label: "Image" },
     { id: "class_name", label: "Classname" },
